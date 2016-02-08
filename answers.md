@@ -59,4 +59,10 @@
 6. If there are obstacles (such as rocks) in its path, the BoxBug will change its path. Otherwise, it will not. 
 
 7. The value of steps is zero once the bug turns twice.
+
+## Exercises
+
+1. CircleBug is very similar to BoxBug; what differentiates it is because it only turns once, it moves in a more circular path than Boxbug does. Even though that 'more circular path' is like the textbook definition of an octagon. Whatever.
+
+2. SpiralBug moves in a spiral, exactly as the prophecy foretold.
  
