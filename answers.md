@@ -40,4 +40,23 @@
 3. I used the setColor() method.
 
 4. The bug disappears. It does not reappear when you move the rock away.
+
+
+# Part 2
+
+## 'Do You Know' Questions
+
+1. sideLength defines the length of the sides of the square pattern in which BoxBug moves.
+
+2. steps tracks how many steps each BoxBug has moved to make sure it only moves that amount of steps.
+
+3. The turn method only turns the bug 45 degrees, so it must repeat twice to get a 90 degree turn and make a box.
+
+4. The move method can be called in the BoxBug class because the BoxBug class extends from the Bug superclass, and thus each of its methods are inherited from the Bug superclass, including turn.
+
+5. Once a BoxBug object is constructed, its sideLength value is immutable. Thus, the size of its square pattern will never change, because the length of the sides of that square will never change.
+
+6. If there are obstacles (such as rocks) in its path, the BoxBug will change its path. Otherwise, it will not. 
+
+7. The value of steps is zero once the bug turns twice.
  
