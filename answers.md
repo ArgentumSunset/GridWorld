@@ -65,4 +65,72 @@
 1. CircleBug is very similar to BoxBug; what differentiates it is because it only turns once, it moves in a more circular path than Boxbug does. Even though that 'more circular path' is like the textbook definition of an octagon. Whatever.
 
 2. SpiralBug moves in a spiral, exactly as the prophecy foretold.
+
+3. ZBug moves in a Z.
+
+4. DancingBug implements a series of turns and moves a specified amount of spaces, then repeats.
+
+5. Contact the Illuminati, ask them to help.
+
+# Part 3
+
+## Set 3
+
+1. loc1.getRow();
+
+2. False
+
+3. (3, 5)
+
+4. SOUTHEAST
+
+5. You pass in the direction and the starting location, so as the program translates the direction into a transformation on the x and y coordinates (+1y, -1x, etc.), and will then return the tile that has those transformations on the original.
+
+## Set 4
+
+1. Get the count of objects in a grid with the size of getOccupiedLocations(), and get a count of the empty locations in a bounded grid by subtracting this value from the total number of grid spaces.
+
+2. the isValid() method.
+
+3. The implementations would be found in the classes that use this interface. (Such as BoundedGrid and UnboundedGrid);
+
+4. No, because ArrayLists are much more flexible than arrays, and can have adjusted values and different lengths based on the information passed to them.
+
+## Set 5
+
+1. Color, direction, and location
+
+2. Its color and direction are the defaults if no specifics are passed, that is to say: red and north.
+
+3. The Actor class was created as a class because there are default implemented methods for all actors that they need to have, and it wouldn't be feasible to write them all within each of the subclasses. There needs to be a place where each Actor can get each default implemented method. Thus, Actor is a superclass.
+
+4. No, an actor cannot be put into a grid twice without removing itself, and it can't remove itself twice. However, it can be placed in, removed, and then put back in.
+
+5. Call the turn() method twice.
+
+## Set 6
+
+1. It calls the isValid() method to check whether it can move to its intended location.
+
+2. It checks to see whether its neighboring space is either empty or a Flower, in which case it can move there.
+
+3. It invokes isValid() and the get() method to validate its moves according to the grid it's on.
+
+4. It invokes getAdjacentLocation() to get the next move's location.
+
+5. It invokes the getLocation() method to, uh, get its location. I mean, it's not rocket science.
+
+6. It checks whether the location is valid, so isValid() would return false if the location is off the grid. It will remove itself from the grid.
+
+7. You could potentially call getLocation() multiple times, but it's better to store the data in a variable to reduce clutter and make the code nice and dry.
+
+8. Because the flowers inherit the bug's color to make them recognizable.
+
+9. No it doesn't, because placing a flower is a part of the move() method, and it's not moving if it's removed, it just... ends.
+
+10. Flower.putSelfInGrid(gr, loc);
+
+11. 4 times
+
+
  
