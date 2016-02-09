@@ -30,16 +30,23 @@ import java.awt.Color;
 public class BoxBugRunner {
 	
 	public static void main(String[] args) {
+		int[] dancing = {3,4,5,1};
 		ActorWorld world = new ActorWorld();
 		BoxBug alice = new BoxBug(6);
 		alice.setColor(Color.ORANGE);
 		CircleBug nick = new CircleBug(2);
 		SpiralBug barak = new SpiralBug(2);
+		ZBug jack = new ZBug(4);
+		DancingBug simon = new DancingBug(dancing);
+		simon.setColor(Color.GREEN);
+		jack.setColor(Color.RED);
 		barak.setColor(Color.BLUE);
 		nick.setColor(Color.YELLOW);
 //		world.add(new Location(7, 8), alice);
 //		world.add(new Location(5, 0), nick);
-		world.add(new Location(6, 6), barak);
+//		world.add(new Location(6, 6), barak);
+//		world.add(new Location(0, 0), jack);
+		world.add(new Location(0, 0), simon);
 		world.show();
 	}
 }

@@ -14,6 +14,25 @@ public class ZBug extends Bug {
 	public void act() {
 		if(!done) {
 			this.setDirection(90);
+			for(int i = 0; i < sideLength; i++){
+				move();
+			}
+			this.turn();
+			this.turn();
+			this.turn();
+			for(int i = 0; i < sideLength; i++){
+				move();
+			}
+			this.turn();
+			this.turn();
+			this.turn();
+			this.turn();
+			this.turn();
+			for(int i = 0; i < sideLength; i++){
+				move();
+			}
+			done = true;
 		}
 	}
+	
 }
