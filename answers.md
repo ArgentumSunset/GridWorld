@@ -132,5 +132,33 @@
 
 11. 4 times
 
+## Group Questions
 
- 
+### Specify
+
+a. It will move one space forward, then jump over the obstacle.
+
+b. It will move one space forward (to the edge of the grid), then turn ninety degrees and resume moving.
+
+c. It will turn ninety degrees and resume moving.
+
+d. It will jump on the actor, destroying it.
+
+e. They will jump past one another.
+
+f. I don't think so.
+
+### Design
+
+a. It should extend the Bug class.
+
+b. Not really. No other classes have that kind of functionality.
+
+c. There should be a constructor, the parameters should be
+
+d. The act method and the constructor should be overridden.
+
+e. We should add whether the bug can jump, and we should also add a method to let the bug kill other actors when it moves into their spaces. So, a canJump() method and a kill() method.
+
+f. Put the bug in an obstacle course and let it run wild. See if it performs to our expectations.
+
