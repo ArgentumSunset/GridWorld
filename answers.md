@@ -138,7 +138,7 @@
 
 a. It will move one space forward, then jump over the obstacle.
 
-b. It will move one space forward (to the edge of the grid), then turn ninety degrees and resume moving.
+b. It will move to the edge of the grid, then turn ninety degrees and resume moving.
 
 c. It will turn ninety degrees and resume moving.
 
@@ -162,3 +162,6 @@ e. We should add whether the bug can jump, and we should also add a method to le
 
 f. Put the bug in an obstacle course and let it run wild. See if it performs to our expectations.
 
+### Testing
+
+The jumper did exactly what we wanted it to do and performed flawlessly in all fields.
