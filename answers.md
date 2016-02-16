@@ -165,3 +165,41 @@ f. Put the bug in an obstacle course and let it run wild. See if it performs to 
 ### Testing
 
 The jumper did exactly what we wanted it to do and performed flawlessly in all fields.
+
+# Part 4
+
+## Set 7
+
+1. The act() method is implemented.
+
+2. They getActors(), processActors(), getMoveLocations(), selectMoveLocations(), and finally, they makeMove().
+
+3. No, because actually getting the neighbors of the Critter, whether they be Critters or other Actors, needs to be a priority for the Critters. Overriding this in Critter subclasses would be shortsighted.
+
+4. Use the processActors() method. Make an ArrayList of all their neighbors, then process them. Check the location that the Critter would move to, and if that space is occupied, don't move there.
+
+5. To make a Critter move, three methods must be invoked. getMoveLocations() gets the locations that the Critter can move to. selectMoveLocations() selects a location for that selfsame Critter to move to. And, finally, makeMove() moves the Critter. Obviously.
+
+6. Critter is an abstract class, meaning that it will never be instantiated in the Grid. Therefore, it needs no cosntructor.
+
+## Set 8
+
+1. The processActors() method is very different. It processes the Actors in a very different way, so the ChameleonCritter can move differently.
+
+2. Because it doesn't want to rewrite Critter's move() method, and when you use the super keyword, it just gets the method from the superclass.
+
+3. Add the code that makes Bug drop flowers into the Critter makeMove() method, then adjust it for Critter's specific properties.
+
+4. Because it doesn't need to. It only needs to use the getActors() method from the Critter superclass. It doesn't need a new method to be a ChameleonCritter. It doesn't get Actors differently than a regular Critter, so it doesn't need a new getActors() method.
+
+5. Bug
+
+6. The getGrid() method.
+
+## Set 9
+
+1. CrabCritters process Actors in the same way as regular Critters, so it doesn't need a new processActors() method to supplement its new behavior.
+
+2. 
+
+
