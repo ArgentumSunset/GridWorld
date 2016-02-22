@@ -41,6 +41,12 @@ public class ChameleonRunner {
 //		world.add(new Location(5, 8), new ChameleonKid());
 		world.add(new Location(4, 4), new RockHound());
 		world.add(new Location(5, 8), new RockHound());
+		world.add(new Location(5, 4), new RockHound());
+		world.add(new Location(6, 8), new RockHound());
+		world.add(new Location(7, 4), new RockHound());
+		world.add(new Location(8, 8), new RockHound());
+		world.add(new Location(8, 7), new BlusterCritter(Color.YELLOW, 10000));
+		world.add(new Location(6, 6), new BlusterCritter(Color.RED, 1));
 		world.show();
 	}
 }
