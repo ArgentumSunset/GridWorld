@@ -200,6 +200,16 @@ The jumper did exactly what we wanted it to do and performed flawlessly in all f
 
 1. CrabCritters process Actors in the same way as regular Critters, so it doesn't need a new processActors() method to supplement its new behavior.
 
-2. 
+2. It gets the location of actors in the front, front-right, and front-left, then processes them and (if they're not rocks) removes them. 
+
+3. It needs to get the locations of the front, front-right, and front-left spaces in the direction it's moving to. It needs to orient its claws.
+
+4. (2, 5), (3, 5), and (4, 5)
+
+5. CrabCritters move right to left randomly, while Critters move randomly in all directions. Critters are jerks. 
+
+6. When it hits another actor, such as a rock or another CrabCritter, that it cannot eat, it turns 90 degrees.
+
+7. If the space it wants to move to contains an actor it can't eat, that space is not validated.
 
 
