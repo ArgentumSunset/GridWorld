@@ -6,29 +6,48 @@ import java.awt.Color;
 import java.util.*;
 
 public class BlusterCritter extends Critter {
-	int c;
+	private int cour = 0;
 	
 	private static final double DARKENING_FACTOR = 0.5;
 	
 	public BlusterCritter(Color color, int courage) {
-		int c = courage;
+		this.cour = courage;
 		setColor(color);
 	}
 	
 	public ArrayList<Actor> getActors() {
 		ArrayList<Actor> actors = new ArrayList<Actor>();
-		for(int dir = 0; dir < 360; dir += 45) {
-		actors.addAll( getGrid().getNeighbors(getLocation().getAdjacentLocation(dir)));
-		}
+		Location loc = getLocation();
+		for(int r = loc.getRow() - 2; r <= loc.getRow() + 2; r++)
+			for(int c = loc.getCol() - 2; c <= loc.getCol() + 2; c++) {
+				
+				Location tempLoc = new Location(r,c);
+				if(getGrid().isValid(tempLoc)) {
+					
+					Actor a = getGrid().get(tempLoc);
+					if(a != null && a != this)
+						actors.add(a);
+				}
+			}
 		return actors;
 	}
 	
 	public void processActors(ArrayList<Actor> actors) {
-		super.processActors(actors);
-		if(actors.size() < c)
-			brighten();
-		else
-			darken();
+		int count = 0;
+		for(Actor a : actors) {
+			if(a instanceof Critter) {
+				count++;
+			}
+			if (count < cour) {
+				brighten(); 
+				System.out.println("Brightened");
+			}
+			else {
+				darken();
+				System.out.println("Darkened");
+			}
+			System.out.println(getColor() + " " + count + " Courage: " + cour);
+		}
 	}
 	
 	 private void brighten(){
