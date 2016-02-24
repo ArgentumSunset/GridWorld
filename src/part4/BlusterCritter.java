@@ -40,13 +40,10 @@ public class BlusterCritter extends Critter {
 			}
 			if (count < cour) {
 				brighten(); 
-				System.out.println("Brightened");
 			}
 			else {
 				darken();
-				System.out.println("Darkened");
 			}
-			System.out.println(getColor() + " " + count + " Courage: " + cour);
 		}
 	}
 	
