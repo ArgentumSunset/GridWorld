@@ -47,7 +47,7 @@ public class ChameleonRunner {
 //		world.add(new Location(8, 8), new RockHound());
 		world.add(new Location(8, 7), new BlusterCritter(Color.YELLOW, 10000));
 		world.add(new Location(6, 6), new BlusterCritter(Color.RED, 1));
-		world.add(new Location(2, 2), new QuickCrab());
+		world.add(new Location(2, 2), new KingCrab());
 		world.show();
 	}
 }
