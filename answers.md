@@ -213,3 +213,7 @@ The jumper did exactly what we wanted it to do and performed flawlessly in all f
 7. If the space it wants to move to contains an actor it can't eat, that space is not validated.
 
 
+## Group Project
+
+PoopCritter will be like a KingCrab in that other actors will move away from it when coming into direct contact, but it moves in all directions, not just side to side. The defining characteristic of a PoopCritter is that it 'poops' : it drops a brown flower in a frequency defined by the user. For example, if the user passes a value of '4' into the PoopCritter constructor, the resultant PoopCritter will poop every four spaces it moves.
+
